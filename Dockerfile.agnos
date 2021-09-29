@@ -45,6 +45,7 @@ RUN /tmp/agnos/compile-ffmpeg.sh
 
 FROM agnos-compiler as agnos-compiler-mapbox-gl-native
 COPY ./userspace/compile-mapbox-gl-native.sh /tmp/agnos/
+COPY ./downloads/mapbox-gl-native/ /tmp/mapbox-gl-native/
 RUN /tmp/agnos/compile-mapbox-gl-native.sh
 
 FROM agnos-compiler as agnos-compiler-qtlocation
